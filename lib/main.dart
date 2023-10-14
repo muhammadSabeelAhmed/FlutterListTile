@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               getChatUI(
+                "https://hips.hearstapps.com/hmg-prod/images/2024-lamborghini-revuelto-127-641a1d518802b.jpg",
                 Colors.green,
                 "SA",
                 "Sabeel Ahmed",
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
                 "10;20",
               ),
               getChatUI(
+                "https://www.rimage.com/emea/wp-content/themes/rimage/assets/images/disc.png",
                 Colors.yellow,
                 "AB",
                 "Abdullah Bin Shahid",
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
                 "11:00",
               ),
               getChatUI(
+                "https://i0.wp.com/cocolapinedesign.com/wp-content/uploads/rimage-11-1.jpeg?fit=2000%2C1498&ssl=1",
                 Colors.red,
                 "AY",
                 "Ayesha",
@@ -75,13 +78,26 @@ getBox(String url) {
   );
 }
 
-getChatUI(Color cColor, String avatar, String title, String subTitle,
-    String trailing) {
+getChatUI(String url, Color cColor, String avatar, String title,
+    String subTitle, String trailing) {
   return ListTile(
     tileColor: Color.fromARGB(255, 232, 232, 232),
     leading: CircleAvatar(
+      backgroundImage: NetworkImage(url),
       backgroundColor: cColor,
-      child: Text(
+      child:
+          // Container(
+          //   decoration: BoxDecoration(
+          //       image: DecorationImage(
+          //         fit: BoxFit.cover,
+          //         image: NetworkImage(url),
+          //       ),
+          //       border: Border.all(color: Colors.black, width: 1),
+          //       color: Colors.yellow,
+          //       borderRadius: BorderRadius.all(Radius.circular(500))),
+          // ),
+
+          Text(
         "$avatar",
         style: TextStyle(
           fontSize: 20,
@@ -91,6 +107,9 @@ getChatUI(Color cColor, String avatar, String title, String subTitle,
     ),
     title: Text("$title"),
     subtitle: Text("$subTitle"),
-    trailing: Text("$trailing"),
+    trailing: Icon(
+      Icons.call,
+      color: Colors.red,
+    ),
   );
 }
