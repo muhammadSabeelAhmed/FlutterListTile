@@ -1,6 +1,22 @@
-# firstproject
+# Flutter Class 2
 
-A new Flutter project.
+Topics we have covered in this repo, You may get video for these all topics on below link.
+<a href="https://youtu.be/3Qw1dnGislY">Youtube Video</>
+Create Flutter App
+Statless Widget
+Scaffold
+Text
+TextStyle
+Container
+Box Decoration
+Row (Main & Cross Axis)
+Column (Main & Cross Axis)
+Image.Asset
+Image.Network
+NetworkImage
+AssetImage
+Circle Avatar
+List Tile
 
 ## Getting Started
 
